@@ -1,0 +1,38 @@
+# --- MkDocs Build Output ---
+# Ignore the entire site build directory (usually named 'site')
+# This folder is regenerated every time you run 'mkdocs build'
+site/
+temp_site/
+docs/_site/
+
+# --- Python Virtual Environment ---
+# Ignore the local virtual environment folder
+venv/
+.venv/
+env/
+
+# --- Dependency Cache ---
+# Ignore Python package installation files and cache
+__pycache__/
+*.pyc
+*.egg-info
+.python-version
+.pytest_cache/
+
+# --- Operating System & Editor Files ---
+# Mac OS X directory files
+.DS_Store
+.Trashes
+
+# VS Code settings (optional, only ignore if you don't share project settings)
+.vscode/
+
+# Project-specific IDE settings (e.g., PyCharm, IntelliJ)
+.idea/
+
+# --- MkDocs Specific ---
+# Ignore the search index generated during development (if stored outside 'site')
+.build-info
+
+# Ignore the automatic date cache created by mkdocs-macros-plugin (if used)
+.cache
