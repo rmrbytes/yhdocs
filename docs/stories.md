@@ -17,5 +17,5 @@
 
     Links:
 
-    1. [Datastore: Referral Partner](/structures/#ds_referral_partner)
-    2. [Datastore: Referral Jobs](/structures/#ds_referral_jobs)
+    1. [Datastore: Referral Partner](../structures/#ds_referral_partner)
+    2. [Datastore: Referral Jobs](../structures/#ds_referral_jobs)

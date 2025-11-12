@@ -71,4 +71,4 @@
     
     Links:
 
-    1. [Enum: Mode of Work](/enums/#enums_mode_of_work)
+    1. [Enum: Mode of Work](../enums/#enums_mode_of_work)

@@ -58,8 +58,7 @@
 ## Dig Deep
 
 !!! info "Index"
-    1. [User Stories](/stories)
-    2. [Data Structures](/structures)
-    3. [Enums](/enums)
-    4. [Entities](/entities)
-    4. [Glossary](/glossary)
+    1. [User Stories](../stories)
+    2. [Data Structures](../structures)
+    3. [Enums](../enums)
+    4. [Glossary](../glossary)
