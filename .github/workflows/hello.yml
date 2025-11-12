@@ -1,0 +1,12 @@
+name: Hello Actions
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]   # change if your default branch is different
+
+jobs:
+  hello:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "It works!"
