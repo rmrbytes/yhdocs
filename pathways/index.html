@@ -1,0 +1,968 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Updated on  2025-11-24">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../structures/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.23">
+    
+    
+      
+        <title>Pathways - YH Specs 2.0</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.84d31ad4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#pathways" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="YH Specs 2.0" class="md-header__button md-logo" aria-label="YH Specs 2.0" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            YH Specs 2.0
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Pathways
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="YH Specs 2.0" class="md-nav__button md-logo" aria-label="YH Specs 2.0" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    YH Specs 2.0
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Pathways
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pathways
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Terms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Terms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pathway-activity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pathway Activity:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pathway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pathway:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pathway-creator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pathway Creator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pathway-activity-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pathway Activity Types
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pathway Activity Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#earning-activity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Earning Activity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skills-activity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Skills Activity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forms-activity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Forms Activity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#artefact-activity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Artefact Activity
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pathway-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pathway Creation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-pathway-activity-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Pathway Activity Creation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-pathway-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Pathway Definition
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-allocate-users-to-pathway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Allocate Users to Pathway
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-beneficiary-registration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Beneficiary Registration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-list-available-pathways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5: List Available Pathways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-add-a-pathway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 6: Add a Pathway
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-7-list-joined-pathways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 7: List Joined Pathways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-8-go-through-a-pathway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 8: Go through a Pathway
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-9-update-of-a-pathway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 9: Update of a Pathway
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-10-complete-or-close-a-pathway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 10: Complete or Close a Pathway
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../structures/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Data Structures
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enums/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Enums
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../glossary/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Glossary
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#terms" class="md-nav__link">
+    <span class="md-ellipsis">
+      Terms
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Terms">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pathway-activity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pathway Activity:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pathway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pathway:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pathway-creator" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pathway Creator
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pathway-activity-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pathway Activity Types
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pathway Activity Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#earning-activity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Earning Activity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#skills-activity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Skills Activity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#forms-activity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Forms Activity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#artefact-activity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Artefact Activity
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pathway-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pathway Creation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-1-pathway-activity-creation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 1: Pathway Activity Creation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-2-pathway-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 2: Pathway Definition
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-3-allocate-users-to-pathway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 3: Allocate Users to Pathway
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-4-beneficiary-registration" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 4: Beneficiary Registration
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-5-list-available-pathways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 5: List Available Pathways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-6-add-a-pathway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 6: Add a Pathway
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-7-list-joined-pathways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 7: List Joined Pathways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-8-go-through-a-pathway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 8: Go through a Pathway
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-9-update-of-a-pathway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 9: Update of a Pathway
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#step-10-complete-or-close-a-pathway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Step 10: Complete or Close a Pathway
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="pathways">Pathways<a class="headerlink" href="#pathways" title="Permanent link">&para;</a></h1>
+<h2 id="terms">Terms<a class="headerlink" href="#terms" title="Permanent link">&para;</a></h2>
+<h3 id="pathway-activity"><strong>Pathway Activity</strong>:<a class="headerlink" href="#pathway-activity" title="Permanent link">&para;</a></h3>
+<p>These are individual activities that a Beneficiary can do. </p>
+<p>The different types of activities are:</p>
+<ul>
+<li><code>earning</code>, </li>
+<li><code>skilling</code>, </li>
+<li><code>forms</code>, </li>
+<li><code>artefacts</code>. </li>
+</ul>
+<p>A pathway activity can belong to one or more Pathways. </p>
+<h3 id="pathway"><strong>Pathway</strong>:<a class="headerlink" href="#pathway" title="Permanent link">&para;</a></h3>
+<p>This is a list of activities that define a pathway.</p>
+<h3 id="pathway-creator"><strong>Pathway Creator</strong><a class="headerlink" href="#pathway-creator" title="Permanent link">&para;</a></h3>
+<p>The role that will be allowed to do the steps as outlined below.</p>
+<h3 id="pathway-activity-types"><strong>Pathway Activity Types</strong><a class="headerlink" href="#pathway-activity-types" title="Permanent link">&para;</a></h3>
+<h4 id="earning-activity"><strong><em>Earning Activity</em></strong><a class="headerlink" href="#earning-activity" title="Permanent link">&para;</a></h4>
+<p>These are a specific earning opportunity link or a link that lists a number of earning opportunities.</p>
+<h4 id="skills-activity"><strong><em>Skills Activity</em></strong><a class="headerlink" href="#skills-activity" title="Permanent link">&para;</a></h4>
+<p>This is a specific skills opportunity link from a Skills partner Organisation (incl P2E)</p>
+<h4 id="forms-activity"><strong><em>Forms Activity</em></strong><a class="headerlink" href="#forms-activity" title="Permanent link">&para;</a></h4>
+<p>This is a link to a Form</p>
+<div class="admonition question">
+<p class="admonition-title">How does this link be available?</p>
+</div>
+<h4 id="artefact-activity"><strong><em>Artefact Activity</em></strong><a class="headerlink" href="#artefact-activity" title="Permanent link">&para;</a></h4>
+<p>This is a link to a video or pdf or similar content</p>
+<hr />
+<h2 id="pathway-creation">Pathway Creation<a class="headerlink" href="#pathway-creation" title="Permanent link">&para;</a></h2>
+<pre class="mermaid"><code>sequenceDiagram
+    actor A as Pathway Creator
+    participant P as Platform
+    actor B as Beneficiary
+    actor S as Skills Orgn
+
+    A-&gt;&gt;P: 1. Create Pathway Activity
+    A-&gt;&gt;P: 2. Define a Pathway
+    A-&gt;&gt;P: 3. Allocate Users to a Pathway
+    B-&gt;&gt;P: 4. Register Pathways
+    B-&gt;&gt;P: 5. List available Pathways
+    B-&gt;&gt;P: 6. Add a Pathway
+    B-&gt;&gt;P: 7. List Joined Pathways
+    B-&gt;&gt;P: 8. Go thru a Pathway
+    S-&gt;&gt;P: 9. Update a Pathway
+    B-&gt;&gt;P: 10. Complete or Close a Pathway
+    A-&gt;&gt;P: 11. Remove a Pathway</code></pre>
+<h2 id="step-1-pathway-activity-creation">Step 1: Pathway Activity Creation<a class="headerlink" href="#step-1-pathway-activity-creation" title="Permanent link">&para;</a></h2>
+<p><a href="../structures/#pathway-activity">Check the Pathway Activity Data Structure</a></p>
+<div class="admonition question">
+<p class="admonition-title">Rules/Features missing</p>
+</div>
+<h2 id="step-2-pathway-definition">Step 2: Pathway Definition<a class="headerlink" href="#step-2-pathway-definition" title="Permanent link">&para;</a></h2>
+<p><a href="../structures/#pathway">Check the Pathway Data Structure</a></p>
+<p><strong>Rules/Features</strong></p>
+<ul>
+<li>Search Pathway Activities (criteria?)</li>
+<li>Copy existing Pathway as a template to add/subtract activities</li>
+<li>Publishing makes the Pathway available for next step</li>
+<li>If a user is undergoing a Pathway it cannot be edited.</li>
+<li>A Published Pathway can be marked as deleted (even if a user is undergoing)</li>
+<li>A deleted Pathway is no longer available to a Beneficiary.</li>
+</ul>
+<div class="admonition question">
+<p class="admonition-title">Need clarification on</p>
+<ul>
+<li>Criteria for search of Pathway Activities </li>
+<li>Activity Type Links</li>
+</ul>
+</div>
+<h2 id="step-3-allocate-users-to-pathway">Step 3: Allocate Users to Pathway<a class="headerlink" href="#step-3-allocate-users-to-pathway" title="Permanent link">&para;</a></h2>
+<p><a href="../structures/#pathway-beneficiary-search-form">Check Pathway Beneficiary Search Form¶</a></p>
+<p><strong>Rules/Features</strong></p>
+<div class="admonition question">
+<p class="admonition-title">None defined so far</p>
+</div>
+<h2 id="step-4-beneficiary-registration">Step 4: Beneficiary Registration<a class="headerlink" href="#step-4-beneficiary-registration" title="Permanent link">&para;</a></h2>
+<p><strong>Rules/Features</strong></p>
+<ol>
+<li>Beneficiary will need to register once when some fields will be mandatory to proceeed.</li>
+<li><a href="../structures/#pathways-registration-form">Check min-set fields required for Pathways registration</a></li>
+</ol>
+<h2 id="step-5-list-available-pathways">Step 5: List Available Pathways<a class="headerlink" href="#step-5-list-available-pathways" title="Permanent link">&para;</a></h2>
+<p><a href="../structures/#pathways-available-view">Check the fields of the view</a></p>
+<p><strong>Rules/Features</strong></p>
+<ol>
+<li>Only Pathways allocated to the Beneficiary is listed here.</li>
+</ol>
+<div class="admonition question">
+<p class="admonition-title">Should this list be filterable/ sortable?</p>
+</div>
+<h2 id="step-6-add-a-pathway">Step 6: Add a Pathway<a class="headerlink" href="#step-6-add-a-pathway" title="Permanent link">&para;</a></h2>
+<p><strong>Rules/Features</strong></p>
+<ol>
+<li>
+<p>From the Step 5 list of available pathways, on selection, the Pathway activities are visible. <a href="../structures/#pathway-details-view">Check Pathway Details View structure</a></p>
+</li>
+<li>
+<p>On confirmation, the pathway is added to the Beneficiary Joined Pathways List.</p>
+</li>
+</ol>
+<h2 id="step-7-list-joined-pathways">Step 7: List Joined Pathways<a class="headerlink" href="#step-7-list-joined-pathways" title="Permanent link">&para;</a></h2>
+<p><a href="../structures/#pathways-joined-view">Check View Structure</a></p>
+<p><strong>Rules/Features</strong></p>
+<ol>
+<li>A pathway can be selected and a priority set (<a href="../enums/#pathway-priority">Check Priority enums</a>)</li>
+<li>Pathways on the list are sorted on priority.</li>
+<li>On selection of a Pathway, that row becomes the top-most row. (<em>Does this mean that it becomes priority A?</em>)</li>
+<li>Closed Pathways are at the bottom</li>
+</ol>
+<h2 id="step-8-go-through-a-pathway">Step 8: Go through a Pathway<a class="headerlink" href="#step-8-go-through-a-pathway" title="Permanent link">&para;</a></h2>
+<p><strong>Rules/Features</strong></p>
+<ol>
+<li>The first time the Beneficiary opens an added Pathway, the system should confirm and record start of the pathway.</li>
+<li><a href="../structures/#pathway-joined-detailed-view">Check the Pathway Joined Detailed View</a></li>
+<li>No more than 3 pathways can be "current" at any time.</li>
+<li>In the above view, the user can pick the current activity (if in progress) or the next availability depending on the is_order boolean.</li>
+<li>The following are the rules on completion:<ol>
+<li><code>earning</code> type: clicking on link will make it as "done".</li>
+<li><code>skills-w-feedback</code> type: click on link will make status as "in progress". This will auto update when skills organisation updates data</li>
+<li><code>skills-w/o-feedback</code> type: click on link will make status as "in progress". Beneficiary will manually update when activity is completed.</li>
+<li><code>artefacts</code> type: when user clicks on link, the activity status is marked as "done"</li>
+<li><code>forms</code> type: when user clicks on link, the activity status is marked as "done"  </li>
+</ol>
+</li>
+</ol>
+<h2 id="step-9-update-of-a-pathway">Step 9: Update of a Pathway<a class="headerlink" href="#step-9-update-of-a-pathway" title="Permanent link">&para;</a></h2>
+<p><strong>Rules/Features</strong></p>
+<ol>
+<li>When Beneficiary clicks on a Skills link that is from an Organisation that provides the platform feedback, this step updates the completion status of the activity.</li>
+</ol>
+<div class="admonition question">
+<p class="admonition-title">Would anyone else be updating Activity Status?</p>
+</div>
+<h2 id="step-10-complete-or-close-a-pathway">Step 10: Complete or Close a Pathway<a class="headerlink" href="#step-10-complete-or-close-a-pathway" title="Permanent link">&para;</a></h2>
+<p><strong>Rules/Features</strong></p>
+<ol>
+<li>If all activities are done, the Pathway will automatically get closed.</li>
+<li>The Beneficiary can close any Pathway at any time.</li>
+</ol>
+<div class="admonition question">
+<p class="admonition-title">Can a closed Pathway be re-opened?</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
