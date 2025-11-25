@@ -1,0 +1,8 @@
+{
+  "jsx_tag_auto_close": {
+    "enabled": false
+  },
+  "use_auto_surround": false,
+  "auto_indent": false,
+  "auto_indent_on_paste": false
+}

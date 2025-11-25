@@ -1,0 +1,6 @@
+# Specs of YH 2.0
+
+
+## Deploy
+
+`mkdocs gh-deploy`

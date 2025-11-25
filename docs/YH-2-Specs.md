@@ -1,4 +1,5 @@
-# Business Requirement Specs YH 2.0
+﻿
+# Business Requirement Specs YH 2.0.1
 
 ### Scope
 
@@ -10,8 +11,7 @@ to record the business requirements of the integrated youth hub platform.
 - pathways
 - partner-app
 
-!!! warning "Note"
-    **P2E is not part of the integration** and will be treated as an external skills platform that is integrated with YH
+>  **P2E is not part of the integration** and will be treated as an external skills platform that is integrated with YH
 
 ## Audience
 
@@ -54,7 +54,8 @@ flowchart TD
   P --> |Monitor| M
 ```
 
-!!! info "The entity names above will be changed after confirmation of glossary and terms"
+
+==The entity names above will be changed after confirmation of glossary and terms==
 
 ## Dig Deep
 
@@ -62,3 +63,4 @@ flowchart TD
 2. [Data Structures](structures.md)
 3. [Enums](enums.md)
 4. [Glossary](glossary.md)
+
